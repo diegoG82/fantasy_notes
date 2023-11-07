@@ -43,7 +43,14 @@
                         <p class="card-text">{{ $note->description }}</p>
                         <p class="card-text">Author:{{ $note->author }}</p>
                         <p class="card-text">Created :{{ $note->created_at }}</p>
-                        <a href="{{ route('notes.show', $note->id) }}" class="btn btn-success">Visualizza</a>
+                        <a href="{{ route('notes.show', $note->id) }}" class="btn btn-success">Details</a>
+                        <a href="{{ route('notes.edit', ['note' => $note->id]) }}" class="btn btn-primary">Edit Note</a>
+                        <form method="POST" action="{{ route('notes.destroy', ['note' => $note->id])">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete Note</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
