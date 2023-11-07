@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid">
+<div class="container">
     <nav class="navbar navbar-expand bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/"><img src="{{asset('img/logo.png')}}"></a>
@@ -25,13 +25,20 @@
 
 </div>
 
-<div class="hero py-5">
-    <h1 class="display-2 text-center my-5">WRITE YOUR FANTASY NOTE</h1>
-    <h2 class="text-center">Want to give some epic note for new generations?</h2>
-    <div class="d-flex justify-content-center  my-5">
-        <button  type="button" class="btn btn-warning register btn-lg">Register</button>
+<div class="container">
+
+    <div class="hero py-5">
+        <h1 class="display-2 text-center my-5">WRITE YOUR FANTASY NOTE</h1>
+        <h2 class="text-center">Want to give some epic note for new generations?</h2>
+        <div class="d-flex justify-content-center  my-5">
+            <button  type="button" class="btn btn-warning register btn-lg">Register</button>
+        </div>
     </div>
+
+
 </div>
+
+
 
 <div class="container">
     <div class="row">
@@ -45,11 +52,7 @@
                         <p class="card-text">Created :{{ $note->created_at }}</p>
                         <a href="{{ route('notes.show', $note->id) }}" class="btn btn-success">Details</a>
                         <a href="{{ route('notes.edit', ['note' => $note->id]) }}" class="btn btn-primary">Edit Note</a>
-                        <form method="POST" action="{{ route('notes.destroy', ['note' => $note->id])">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete Note</button>
-                        </form>
+                        
 
                     </div>
                 </div>

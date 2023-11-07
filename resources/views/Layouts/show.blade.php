@@ -13,6 +13,11 @@
                 <p class="card-text">{{ $note->description }}</p>
                 <p class="card-text">Author:{{ $note->author }}</p>
                 <p class="card-text">Created :{{ $note->created_at }}</p>
+                <form method="POST" action="{{ route('notes.destroy', ['note' => $note->id])">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete Note</button>
+                </form>
                 <a href="{{ route('notes.index') }}" class="btn btn-success">Turn back</a>
     
             </div>
