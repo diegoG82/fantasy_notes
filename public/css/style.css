@@ -1,0 +1,70 @@
+body,
+html {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container-fluid,
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 50px;
+}
+
+.p-menu {
+    font-size: 25px;
+    color: #5a79df;
+}
+
+i {
+    margin-right: 8px;
+    color: #ccc;
+}
+
+.hero {
+    background-color: #5a79df;
+    color: #fff;
+    border: 5px solid #fabf0c;
+}
+
+.card {
+    height: 400px;
+    color: white;
+    background-color: #5a79df;
+    border: 5px solid #fabf0c;
+}
+
+.register {
+    background-color: #fabf0c;
+    color: #fff;
+    border: none;
+}
+
+.register:hover {
+    background-color: #5adfa1;
+}
+
+.my-btn {
+    background-color: #5a79df;
+    border: none;
+}
+
+.tags {
+    background-color: #fabf0c;
+    border-radius: 20px;
+    margin: 10px 5px;
+}
+.card-img-top {
+    width: 60%;
+}
+
+.img-edit {
+    width: 10%;
+}
+footer {
+    background-color: #5a79df;
+    border: 1px solid black;
+}
